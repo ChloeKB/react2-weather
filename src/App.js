@@ -3,8 +3,6 @@ import Search from "./Search.js";
 import Forecast from "./Forecast.js";
 
 export default function App() {
-  // eslint-disable-next-line
-  let dataForecast = {};
   return (
     <div class="container">
       <div class="row justify-content-evenly">
