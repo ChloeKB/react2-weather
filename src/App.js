@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import Weather from "./Weather";
+import "./App.css";
+import Search from "./Search.js";
+import Forecast from "./Forecast.js";
 
-function App() {
+export default function App() {
+  let dataForecast = {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World</h1>
-        <Weather />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <div class="col-6 box-one">
+          <br />
+          <Search />
+          <Forecast
+            city="Madrid"
+            date="Monday May 24th"
+            time="11:48"
+            description="Sunny"
+            temperature={28}
+            imageUrl="https=//ssl.gstatic.com/onebox/weather/64/sunny.png"
+            humidity={20}
+            minTemp={17}
+            maxTemp={28}
+            sunrise="07:02"
+            sunset="21:43"
+          />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
